@@ -1,0 +1,19 @@
+body
+{
+  background-image: url('../img/country.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-attachment: fixed;
+}
+
+
+.scrollable
+{
+  height: 400px;
+  width: 500px;
+  overflow: scroll;
+
+
+}

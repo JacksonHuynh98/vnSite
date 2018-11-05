@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Welcome | Sector 9 </title>
+  <link rel="stylesheet" href="../static/js/bootstrap.min.js">
+  <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../static/css/custom.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <!--[if IE]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="home.html">Sector 9 | Minds<em><strong>Unchained</strong></em></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navCollapseButton" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id=navCollapseButton>
+      <ul class="nav navbar-nav mr-auto">
+        <li class="nav-item active"><a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a></li>
+        <li class="nav-item"><a href="/task" class="nav-link">Tasks</a></li>
+        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="/dwnFiles">Downloadable Files</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        <li class="nav-item"><a href="register.html" class="nav-link">Register</a></li>
+      </ul>
+      {% if session['Name'] == session["Name"] %}
+        <a href="/"><button class="btn btn-info my-2 my-sm-0 logIN" onclick="/">Log Out {{session["Name"]}}</button></a>
+      {% else %}
+      <a href="/"><button class="btn btn-info my-2 my-sm-0 logIN" onclick="/">Log In</button></a>
+
+      {% endif %}
+
+      <!-- <button class="btn btn-info my-2 my-sm-0" action='connect.php'>Sign Up</button> -->
+    </div>
+  </nav>
+</head>
+<h1 class="text-center">Nathan's Classes</h1>
+<div class="list-group">
+<ul class="list-group">
+  {{%for i in subjects%}}
+  <a href="list-group-item list-group-item-action" data-toggle='collapse' data-target='#demo'><li class="list-group-item d-flex justify-content-between align-items-center">
+      {{i}}
+      <span class="badge badge-primary badge-pill">14</span>
+    </li>
+  </a>
+  <div id ="demo" class="collapse">
+    <table class="table table-hover">
+      <thead>
+        <tr class='table-light colName'>
+          <th scope="col"><strong>Assignment Name</strong></th>
+          <th scope="col text-center">Due Date</th>
+          <th scope="col" class='text-right'>Grade Status</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr class='lightBlue'>
+          <th scope="row">Molecule Comprehension</th>
+          <td class='center'>Tuesday</td>
+          <td class='text-right'><span class="badge badge-success">  Graded</span></a></td>
+
+      </div>
+          </td>
+        </div>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  {{%endfor%}}
+  <!-- <a href="list-group-item list-group-item-action" data-toggle='collapse' data-target='#demo2'><li class="list-group-item d-flex justify-content-between align-items-center">
+      Calculus II
+      <span class="badge badge-primary badge-pill">14</span>
+    </li>
+  </a>
+  <div id ="demo2" class="collapse">
+    <table class="table table-hover">
+      <thead>
+        <tr class='table-light colName'>
+          <th scope="col"><strong>Assignment Name</strong></th>
+          <th scope="col text-center">Due Date</th>
+          <th scope="col" class='text-right'>Grade Status</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr class='lightBlue'>
+          <th scope="row">Molecule Comprehension</th>
+          <td class='center'>Tuesday</td>
+          <td class='text-right'><span class="badge badge-success">  Graded</span></a></td>
+
+      </div>
+          </td>
+        </div>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <a href="list-group-item list-group-item-action" data-toggle="collapse" data-target='#demo3'><li class="list-group-item d-flex justify-content-between align-items-center">
+      A&P II
+      <span class="badge badge-primary badge-pill">1</span>
+    </li>
+  </a>
+  <div id ="demo3" class="collapse">
+    <table class="table table-hover">
+      <thead>
+        <tr class='table-light colName'>
+          <th scope="col"><strong>Assignment Name</strong></th>
+          <th scope="col text-center">Due Date</th>
+          <th scope="col" class='text-right'>Grade Status</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr class='lightBlue'>
+          <th scope="row">Molecule Comprehension</th>
+          <td class='center'>Tuesday</td>
+          <td class='text-right'><span class="badge badge-success">  Graded</span></a></td>
+
+      </div>
+          </td>
+        </div>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <a href="list-group-item list-group-item-action"><li class="list-group-item d-flex justify-content-between align-items-center">
+      Biology II
+      <span class="badge badge-primary badge-pill">14</span>
+    </li>
+  </a>
+  <div id ="demo4" class="collapse">
+    <table class="table table-hover">
+      <thead>
+        <tr class='table-light colName'>
+          <th scope="col"><strong>Assignment Name</strong></th>
+          <th scope="col text-center">Due Date</th>
+          <th scope="col" class='text-right'>Grade Status</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr class='lightBlue'>
+          <th scope="row">Molecule Comprehension</th>
+          <td class='center'>Tuesday</td>
+          <td class='text-right'><span class="badge badge-success">  Graded</span></a></td>
+
+      </div>
+          </td>
+        </div>
+        </tr>
+      </tbody>
+    </table>
+  </div> -->
+</ul>
+</div>
+
+<script src="https://code.jquery.com/jquery-2.1.3.js"></script>
+<script src="../static/js/bootstrap.js"></script>
+
+  <!-- <button class='btn btn-info btn-lg'type="button" name="button">Start</button> -->
+<script src="../static/vendor/jquery/jquery.min.js"></script>
+<script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
