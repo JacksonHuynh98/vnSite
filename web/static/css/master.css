@@ -1,0 +1,77 @@
+html
+{
+   color: #ffffff;
+  font-family: 'Open Sans', sans-serif
+  font-size: 54px; font-weight: 300;
+  line-height: 58px;
+  margin: 0 0 58px;
+}
+
+
+body
+{
+  background: url(../img/bg2.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.left-aligned
+{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.long-textarea
+{
+  min-width: 100%;
+}
+
+.padding-low
+{
+
+}
+.center-class
+{
+  position: absolute;
+}
+
+
+.stacked-options
+{
+  float: none;
+    margin: 0 auto;
+}
+
+#container{width:100%;}
+#left{float:left;width:100px;}
+#right{float:right;width:100px;}
+#center{margin:0 auto;width:100px;}
+
+.left-align
+{
+  margin:0;
+  vertical-align: bottom;
+  position: relative;
+  top: -10px;
+}
+
+
+.center-text
+{
+  text-align: center;
+}
+
+.transparent
+{
+  background: rgba(243, 215, 209,0.2);
+}
+
+.transparent:active
+{
+  background: rgba(243, 215, 209,0.8)
+}
+
+.transparent-text
+{
+  color: rgba(243, 215, 209,0.2);
+}
